@@ -1,3 +1,26 @@
+<h1>Review</h1>
 <p>
-  home works!
+  {{homeTitle}}
 </p>
+<ng-content></ng-content>
+
+<!-- prop binding -->
+<h2>Interpolation:</h2>
+<input value={{myString}}/>
+<br>
+<!-- Event binding -->
+<h3>Event Binding:</h3>
+<button (click)="alertMe()">Click Event</button>
+
+<!-- two way binding -->
+<h4>Two way data binding:</h4>
+<span>Car Model: </span>
+<label>{{car.model}}</label>
+<br>
+<input [(ngModel)]="car.model"/>
+<br>
+<br>
+<span>Car Color: </span>
+<label>{{car.color}}</label>
+<br>
+<input [(ngModel)]="car.color"/>
