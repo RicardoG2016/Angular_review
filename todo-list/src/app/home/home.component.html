@@ -24,3 +24,10 @@
 <label>{{car.color}}</label>
 <br>
 <input [(ngModel)]="car.color"/>
+
+<p>{{test.one}}</p>
+<p>{{test.two}}</p>
+
+<h5>Output Event binding</h5>
+<!--@output: event is created in .ts file so it can fire when the user clicks.looks for function in home .ts and then fire when it clicks. -->
+<button (click)="fireYellEvent($event)">@Output from home to root.</button>

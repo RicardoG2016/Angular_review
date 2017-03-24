@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
+
 export class HomeComponent implements OnInit {
   homeTitle = "Welcome to the homepage...";
   myString = "binded data"
@@ -20,6 +21,14 @@ export class HomeComponent implements OnInit {
     color: "Black"
   };
 
+// input allows you to input values from other components. Test is from the root component.
+  @Input() test;
+// output allows info to go from home back to root component.
+  @Output() onYell = new EventEmitter();
+
+  fireYellEvent(e){
+    this.onYell.emit(e);
+  }
 
   constructor() { }
 

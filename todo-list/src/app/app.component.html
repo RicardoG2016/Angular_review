@@ -7,6 +7,10 @@
     </ul>
   </nav>
 </header>
+
+<!-- @input: app component lets users get data from the root to the home component by using @input at the home component. -->
+
+<!-- @output: yell custom function is listening and when it is fired in the home component it will pass data into the interpolation below.-->
 <section id="main">
-  <app-home>Content</app-home>
+  <app-home [test]="test" (onYell)="yell($event)">Content</app-home>
 </section>
