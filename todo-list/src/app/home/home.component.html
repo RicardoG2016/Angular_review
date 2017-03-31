@@ -1,19 +1,26 @@
-<h1>Review</h1>
+<h1>Review/Study Guide</h1>
+<hr>
+
+<h2>Routing</h2>
+
 <p>
   {{homeTitle}}
 </p>
 <ng-content></ng-content>
+<hr>
 
 <!-- prop binding -->
 <h2>Interpolation:</h2>
 <input value={{myString}}/>
 <br>
+<hr>
 <!-- Event binding -->
-<h3>Event Binding:</h3>
+<h2>Event Binding:</h2>
 <button (click)="alertMe()">Click Event</button>
+<hr>
 
 <!-- two way binding -->
-<h4>Two way data binding:</h4>
+<h2>Two way data binding:</h2>
 <span>Car Model: </span>
 <label>{{car.model}}</label>
 <br>
@@ -24,10 +31,14 @@
 <label>{{car.color}}</label>
 <br>
 <input [(ngModel)]="car.color"/>
+<br>
+<hr>
 
-<p>{{test.one}}</p>
-<p>{{test.two}}</p>
+<h2>Input: From Root to Home component</h2>
+<p>Test.one: {{test.one}}</p>
+<p>Test.two: {{test.two}}</p>
+<hr>
 
-<h5>Output Event binding</h5>
+<h2>Output: From Home to Root component</h2>
 <!--@output: event is created in .ts file so it can fire when the user clicks.looks for function in home .ts and then fire when it clicks. -->
 <button (click)="fireYellEvent($event)">@Output from home to root.</button>

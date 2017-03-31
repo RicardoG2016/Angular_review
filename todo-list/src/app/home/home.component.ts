@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-  homeTitle = "Welcome to the homepage...";
+  homeTitle = "Homepage...";
   myString = "binded data"
   
   // event binding ex
